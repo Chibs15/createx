@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+* {
+    margin: 0 auto;
+}
+
+.header {
+    min-height: 1080px;
+    background: url(../img/background1.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.header_menu {
+    display: flex;
+    padding-top: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .left_menu {
+        display: flex;
+        padding-top: 15px;
+        margin: 0;
+
+        .logo_link {
+            padding-right: 60px;
+        }
+
+        .services {
+
+
+
+
+            .dropdown {
+                font-family: 'Lato';
+                font-style: normal;
+                font-size: 16px;
+                line-height: 160%;
+                color: #FFFFFF;
+
+                display: flex;
+
+                .links {
+                    opacity: 0.6;
+                }
+
+                .links:not(:last-child) {
+                    padding-right: 40px;
+                }
+
+                .links:hover {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+
+                .dropbtn {
+                    color: white;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+
+                    img {
+                        padding-left: 8px;
+                    }
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                    background: white;
+
+                    .links {
+                        padding: 15px;
+                        color: black;
+                        opacity: 1;
+                    }
+
+                    .links:hover {
+                        color: #7772F1;
+                        transition: 0.3s;
+                    }
+                }
+
+                .dropdown-content a {
+                    color: #FFFFFF;
+                    opacity: 0.6;
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+
+            .dropdown_button:hover .dropdown-content {
+                display: block;
+            }
+        }
+    }
+
+    .right_button {
+        margin-left: 344px;
+
+        .talk_btn {
+            width: 199px;
+            height: 52px;
+            cursor: pointer;
+            border: 0;
+            background: #7772F1;
+            border-radius: 4px;
+
+            .btn_text {
+                font-family: 'Lato';
+                font-style: normal;
+                font-size: 16px;
+                line-height: 52px;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.5px;
+                color: #FFFFFF;
+            }
+        }
+
+        .talk_btn:hover {
+            background: #4f4ae4;
+            transition: 0.4s;
+        }
+    }
+
+}
+
+.header_content {
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+
+    .header_content_h1 {
+        display: flex;
+        width: 810px;
+        float: left;
+        flex-direction: column;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 72px;
+        margin: 0;
+        font-family: 'Lato';
+        font-weight: 900;
+        line-height: 130%;
+        letter-spacing: 1px;
+
+        .h1 {
+            span {
+                color: #7772F1;
+            }
+        }
+    }
+
+    .header_content_btn_video {
+        margin: 0;
+        display: flex;
+        padding-top: 60px;
+
+        .content_btn {
+            margin: 0;
+
+            .get_btn {
+                display: inline-flex;
+                padding: 0px 40px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 4px;
+                border: 1px solid var(--white, #FFF);
+
+                a {
+                    color: var(--white, #FFF);
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: 'Lato';
+                    font-weight: 700;
+                    line-height: 52px;
+                    letter-spacing: 0.5px;
+                    text-decoration: none;
+                }
+            }
+
+            .get_btn:hover {
+                background-color: white;
+                transition: 0.4s;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+
+        .content_video {
+            margin: 0;
+            padding-left: 40px;
+            display: flex;
+
+            .trigger {
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background-color: #7772f1;
+                vertical-align: middle;
+                text-align: center;
+                border: 0;
+                cursor: pointer;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .play {
+                text-align: center;
+                color: white;
+                font-size: 16px;
+                font-family: 'Lato';
+                font-weight: 700;
+                line-height: 160%;
+                padding: 13px 0 0 17px;
+            }
+
+            .trigger:hover {
+                box-shadow: 1px 1px 25px 10px rgba(57, 59, 192, 0.623)
+            }
+
+            .modal {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1.1);
+                transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            }
+
+            .modal-content {
+                background-color: rgba(3, 0, 0, 0.74);
+                height: 100%;
+            }
+
+            .video {
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .close-button {
+                float: right;
+                width: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 0.25rem;
+                background-color: lightgray;
+                margin: 10px 10px 0 0;
+            }
+
+            .close-button:hover {
+                background-color: #4f4ae4;
+                transition: 0.3s;
+                color: white;
+            }
+
+            .show-modal {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1.0);
+                transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.5s;
+            }
+        }
+    }
+
+}
+
+.header_footer {
+    
+}
